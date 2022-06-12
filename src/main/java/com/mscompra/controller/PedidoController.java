@@ -18,12 +18,12 @@ public class PedidoController {
 	private PedidoRepository repository;
 	
 	@GetMapping(path = "/api/pedido/{id}")
-	public ResponseEntity consultar(@PathVariable("codigo") Long id) {
+	public ResponseEntity consultar(@PathVariable("id") Integer id) {
 		return repository.findById(id).map(record -> ResponseEntity.ok().body(record))
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
-	@PostMapping(path = "/api/usuario/salvar")
+	@PostMapping(path = "/api/pedido/salvar")
 	public Pedido salvar(@RequestBody Pedido pedido) {
 		return repository.save(pedido);
 	}

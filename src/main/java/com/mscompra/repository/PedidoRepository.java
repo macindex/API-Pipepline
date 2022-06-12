@@ -1,10 +1,10 @@
 package com.mscompra.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
 import com.mscompra.model.Pedido;
 
 
-public interface PedidoRepository extends JpaRepository<Pedido, Long>{
+public interface PedidoRepository extends CrudRepository<Pedido, Integer>{
 
 }
