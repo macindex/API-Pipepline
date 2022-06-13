@@ -12,6 +12,7 @@ import javax.persistence.Table;
 public class Pedido {
 
 	// @GeneratedValue(strategy = GenerationType.AUTO)
+	// @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 	private Integer Id;
 	@Column(nullable = false, length = 50)
@@ -20,38 +21,55 @@ public class Pedido {
 	private String produto;
 	@Column(nullable = false, length = 50)
 	private Integer valor;
-
+	private String dataCompra;
+	private String cpfCliente;
+	private String cep;
+	
+	
 	public Integer getId() {
 		return Id;
 	}
-
 	public void setId(Integer id) {
 		Id = id;
 	}
-
 	public String getNome() {
 		return nome;
 	}
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
 	public String getProduto() {
 		return produto;
 	}
-
 	public void setProduto(String produto) {
 		this.produto = produto;
 	}
-
 	public Integer getValor() {
 		return valor;
 	}
-
 	public void setValor(Integer valor) {
 		this.valor = valor;
 	}
+	public String getDataCompra() {
+		return dataCompra;
+	}
+	public void setDataCompra(String dataCompra) {
+		this.dataCompra = dataCompra;
+	}
+	public String getCpfCliente() {
+		return cpfCliente;
+	}
+	public void setCpfCliente(String cpfCliente) {
+		this.cpfCliente = cpfCliente;
+	}
+	public String getCep() {
+		return cep;
+	}
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+	
+	
 
 	// @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 //	private String dataCompra;
