@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+//import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "tb_pedido")
@@ -16,19 +16,19 @@ public class Pedido {
 	// @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 	private Integer Id;
-	@NotBlank
+//	@NotBlank(message = “O campo nome não pode ser em branco”)
 	@Column(nullable = false, length = 50)
 	private String nome;
-	@NotNull
+//	@NotNull
 	@Column(nullable = false, length = 50)
 	private String produto;
-	@NotNull
+//	@NotNull
 	@Min(1)
 	@Column(nullable = false, length = 50)
 	private Integer valor;
-	@NotNull
+//	@NotNull
 	private String dataCompra;
-	@NotNull
+//	@NotNull
 	private String cpfCliente;
 	private String cep;
 
