@@ -16,7 +16,9 @@ public class Producer {
 	@Autowired
 	private RabbitTemplate rabbitTemplate; 
 	
+	@Autowired
 	private Queue queue;
+	
 	@PostMapping
 	public void producer(@RequestBody String payload) {
 		rabbitTemplate.convertAndSend(queue.getName(), payload);
